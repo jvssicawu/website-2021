@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "website-2020",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A personal website to showcase my work.",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -11,21 +11,28 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "lint": "eslint ./"
   },
   "dependencies": {
     "gatsby": "^2.24.61",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
+    "gatsby-source-filesystem": "^2.3.30",
+    "gatsby-transformer-json": "^2.4.12",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "prettier": "2.1.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jvssicawu/website-2020"
   }
 }

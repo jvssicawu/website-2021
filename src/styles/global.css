@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Solway:wght@300;700&display=swap');
+
+html {
+    background-color: #28284D;
+    font-family: 'Solway', Helvetica, serif;
+		font-size: 16px;
+		color: white;
+}
+
+section#home {
+	height: 100vh;
+	min-height: 100vh;
+	position: relative;
+	align-items: center;
+	display: flex;
+}

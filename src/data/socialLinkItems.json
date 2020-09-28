@@ -1,0 +1,22 @@
+[
+	{
+		"href": "https://www.linkedin.com/in/jvssicawu/",
+		"imageUrl": "assets/social/LinkedIn.svg",
+		"description": "LinkedIn Icon"
+	},
+	{
+		"href": "https://medium.com/@jessicawu.9898",
+		"imageUrl": "assets/social/Medium.svg",
+		"description": "Medium Icon"
+	},
+	{
+		"href": "https://github.com/jvssicawu",
+		"imageUrl": "assets/social/GitHub.svg",
+		"description": "GitHub Icon"
+	},
+	{
+		"href": "mailto:jessicawu.98@hotmail.ca",
+		"imageUrl": "assets/social/Email.svg",
+		"description": "Email Icon"
+	}
+]

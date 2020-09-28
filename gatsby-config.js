@@ -6,5 +6,20 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
-}
+  siteMetadata: {
+    title: `Jessica's Personal Website`,
+    siteUrl: `https://jvssicawu.github.io/website-2020`,
+    description: `A static website to showcase my work.`,
+  },
+  plugins: [
+    `gatsby-plugin-smoothscroll`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+  ],
+};
