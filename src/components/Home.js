@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 import { useStaticQuery, graphql } from 'gatsby';
 import Link from './Link';
-import './Home.module.css';
 
 const SectionContainer = styled.div`
   margin: auto;
   text-align: center;
   position: relative;
   z-index: 1;
+  h1 {
+    font-size: 24px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  img {
+    border-style: none;
+    margin-bottom: 0.5rem;
+  }
+  span {
+    color: #f37777;
+  }
 `;
 
 const LinkContainer = styled.div`
@@ -23,14 +35,16 @@ const socialLinksQuery = graphql`
         node {
           description
           href
-          imageUrl
+          imageUrlDark
+          imageUrlLight
         }
       }
     }
   }
 `;
 
-function Home() {
+const Home = () => {
+  const themeContext = useContext(ThemeManagerContext);
   const { allSocialLinkItemsJson } = useStaticQuery(socialLinksQuery);
   return (
     <SectionContainer>
@@ -43,12 +57,16 @@ function Home() {
           <Link
             description={item.node.description}
             href={item.node.href}
-            imageUrl={item.node.imageUrl}
+            imageUrl={
+              themeContext.isDark
+                ? item.node.imageUrlDark
+                : item.node.imageUrlLight
+            }
           />
         ))}
       </LinkContainer>
     </SectionContainer>
   );
-}
+};
 
 export default Home;

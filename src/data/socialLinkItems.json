@@ -1,22 +1,26 @@
 [
 	{
 		"href": "https://www.linkedin.com/in/jvssicawu/",
-		"imageUrl": "assets/social/LinkedIn.svg",
+		"imageUrlDark": "assets/social/LinkedIn.svg",
+		"imageUrlLight": "assets/social/LinkedInDark.svg",
 		"description": "LinkedIn Icon"
 	},
 	{
 		"href": "https://medium.com/@jessicawu.9898",
-		"imageUrl": "assets/social/Medium.svg",
+		"imageUrlDark": "assets/social/Medium.svg",
+		"imageUrlLight": "assets/social/MediumDark.svg",
 		"description": "Medium Icon"
 	},
 	{
 		"href": "https://github.com/jvssicawu",
-		"imageUrl": "assets/social/GitHub.svg",
+		"imageUrlDark": "assets/social/GitHub.svg",
+		"imageUrlLight": "assets/social/GitHubDark.svg",
 		"description": "GitHub Icon"
 	},
 	{
 		"href": "mailto:jessicawu.98@hotmail.ca",
-		"imageUrl": "assets/social/Email.svg",
+		"imageUrlDark": "assets/social/Email.svg",
+		"imageUrlLight": "assets/social/EmailDark.svg",
 		"description": "Email Icon"
 	}
 ]
