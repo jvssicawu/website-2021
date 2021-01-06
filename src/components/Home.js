@@ -2,15 +2,14 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 import { useStaticQuery, graphql } from 'gatsby';
+import Button from './Button';
 import Link from './Link';
 
 const SectionContainer = styled.div`
   margin: auto;
   text-align: center;
-  position: relative;
-  z-index: 1;
   h1 {
-    font-size: 24px;
+    font-size: 2.0rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
@@ -19,7 +18,7 @@ const SectionContainer = styled.div`
     margin-bottom: 0.5rem;
   }
   span {
-    color: #f37777;
+    color: ${(props) => props.theme.colorPalette.primaryButton};
   }
 `;
 
@@ -50,11 +49,11 @@ const Home = () => {
     <SectionContainer>
       <img src="assets/profilePic.svg" alt="Jess" />
       <h1>Jessica Wu</h1>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <span>Hi, I'm a developer!</span>
+      <span>Hi, I&apos;m a developer!</span>
       <LinkContainer>
         {allSocialLinkItemsJson.edges.map((item) => (
           <Link
+            key={item.node.description}
             description={item.node.description}
             href={item.node.href}
             imageUrl={
@@ -65,6 +64,10 @@ const Home = () => {
           />
         ))}
       </LinkContainer>
+      <Button
+        href="https://drive.google.com/file/d/1Q1sDxxgvIbdiEvTbR0Xxzjjm99fjHjLq/view?usp=sharing"
+        label="Hire me! :)"
+      />
     </SectionContainer>
   );
 };

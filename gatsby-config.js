@@ -8,6 +8,8 @@ const colorPalette =  {
 	darkBase: '#28284D',
 	lightBase: '#EAEAFF',
 	lightText: '#FFFFFF',
+	primaryButton: '#F37777',
+	primaryButtonHover: '#D94A64',
 };
 
 module.exports = {

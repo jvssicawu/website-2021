@@ -2,9 +2,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  html {
+  * {
+    @import url('https://fonts.googleapis.com/css2?family=Solway:wght@400;500;700&display=swap');
     font-family: 'Solway', Helvetica, serif;
-    font-size: 16px;
+  }
+  html {
+    font-size: 1.1rem;
   }
   body {
     background-color: ${(props) => props.theme.global.bg};
@@ -13,7 +16,6 @@ export const GlobalStyle = createGlobalStyle`
   section#home {
     height: 100vh;
     min-height: 100vh;
-    position: relative;
     align-items: center;
     display: flex;
   }

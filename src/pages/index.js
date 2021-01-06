@@ -29,12 +29,12 @@ const Main = withTheme((props) => {
           onChange={() => themeContext.toggleDark()}
           checked={themeContext.isDark}
         />
-        <span>Enable Dark Mode</span>
+        <span>Dark Mode</span>
       </ToggleWrapper>
       <main className="content">
         {/* Home */}
         <section id="home">
-          <Home />
+          <Home props={props} />
         </section>
       </main>
     </PageWrapper>
