@@ -4,11 +4,13 @@ import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 import { useStaticQuery, graphql } from 'gatsby';
 import Button from '../components/Button';
 import Link from '../components/Link';
+import ParallaxLayers from '../components/ParallaxLayers';
 import Section from '../components/Section';
 import Toggle from '../components/Toggle';
 
 const LinkContainer = styled.div`
   margin-top: 1em;
+  margin-bottom: 1em;
   list-style: none;
 `;
 
@@ -33,6 +35,7 @@ const Home = () => {
   return (
     <>
       <Toggle />
+      <ParallaxLayers />
       <Section>
         <img src="assets/profilePic.svg" alt="Jess" />
         <h1>Jessica Wu</h1>

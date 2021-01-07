@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const LinkWrapper = styled.div`
   display: inline-block;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   &:not(:last-child) {
     margin-right: 1em;
   }
@@ -15,11 +15,17 @@ const LinkWrapper = styled.div`
     padding-bottom: 0px;
   }
   &:focus-within a {
-    outline: thin dotted;
+    outline: ${(props) => props.theme.global.color} dotted 2px;
   }
-  &:hover,
-  &:focus-within {
+  &:hover {
     filter: invert(0.5) sepia(1) hue-rotate(310deg) saturate(4) brightness(1);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  img {
+    margin-bottom: 0px;
   }
 `;
 

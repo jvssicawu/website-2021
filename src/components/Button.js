@@ -7,10 +7,10 @@ const ButtonWrapper = styled.div`
   border-radius: 1.5em;
   padding: 0.8em;
   margin: 0.5em 1.5em;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   a {
     color: ${(props) => props.theme.global.color};
     font-weight: 500;
@@ -20,6 +20,10 @@ const ButtonWrapper = styled.div`
   &:focus-within {
     background: ${(props) => props.theme.colorPalette.primaryButtonHover};
     cursor: pointer;
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -o-transform: translateY(-6px);
+    transform: translateY(-6px);
   }s
 `;
 

@@ -67,7 +67,8 @@ const About = () => {
             passionate about both
             <span> design </span>
             and
-            <span> technology</span>.
+            <span> technology</span>
+            .
           </p>
           <p>
             I love finding ways to connect the two and bring creations to life,
