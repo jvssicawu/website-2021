@@ -4,12 +4,17 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const colorPalette =  {
-	darkBase: '#28284D',
-	lightBase: '#EAEAFF',
-	lightText: '#FFFFFF',
-	primaryButton: '#F37777',
-	primaryButtonHover: '#D94A64',
+const colorPalette = {
+  black: '#000000',
+  darkBase: '#28284D',
+  lightBase: '#EAEAFF',
+  lightText: '#FFFFFF',
+  primaryButton: '#F37777',
+  primaryButtonHover: '#D94A64',
+  red: '#F37777',
+  teal: '#83D4D1',
+  white: '#FFFFFF',
+  yellow: '#FED19C',
 };
 
 module.exports = {
@@ -24,6 +29,13 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`solway\:300,500,700`],
+        display: 'swap',
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
@@ -34,7 +46,7 @@ module.exports = {
       resolve: `gatsby-styled-components-dark-mode`,
       options: {
         light: {
-					colorPalette: colorPalette,
+          colorPalette: colorPalette,
           global: {
             bg: colorPalette.lightBase,
             color: colorPalette.darkBase,

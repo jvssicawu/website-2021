@@ -8,7 +8,7 @@ const LinkWrapper = styled.div`
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   &:not(:last-child) {
-    margin-right: 1.0rem;
+    margin-right: 1em;
   }
   & > a {
     padding: 8px;
