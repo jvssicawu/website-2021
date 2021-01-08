@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from 'gatsby';
+import useIsInViewport from 'use-is-in-viewport';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import Header from '../components/Header';
@@ -26,6 +27,22 @@ const Row = styled.div`
   &:not(:last-child) {
     margin-bottom: 4em;
   }
+  -webkit-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+  -moz-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+  -o-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+  transition: opacity 0.6s ease-in, transform 0.6s ease-out;
+  &.hidden {
+    will-change: opacity;
+    opacity: 0;
+    -webkit-transform: translateY(10vh);
+    -moz-transform: translateY(10vh);
+    -o-transform: translateY(10vh);
+    transform: translateY(10vh);
+  }
+  &.visible {
+    opacity: 1;
+    transform: none;
+  }
 `;
 
 const Column = styled.div`
@@ -50,10 +67,11 @@ const passionsQuery = graphql`
 
 const About = () => {
   const { allPassionItemsJson } = useStaticQuery(passionsQuery);
+  const [isInViewport, targetRef] = useIsInViewport();
   return (
     <Section>
       <Header>About Me</Header>
-      <Row>
+      <Row ref={targetRef} className={isInViewport ? 'visible' : 'hidden'}>
         <Column>
           <img src="assets/profilePic.svg" alt="Jess" />
           <Button

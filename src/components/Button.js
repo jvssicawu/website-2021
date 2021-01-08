@@ -16,15 +16,14 @@ const ButtonWrapper = styled.div`
     font-weight: 500;
     text-decoration: none;
   }
-  &:hover,
-  &:focus-within {
+  &:hover {
     background: ${(props) => props.theme.colorPalette.primaryButtonHover};
     cursor: pointer;
     -webkit-transform: translateY(-6px);
     -moz-transform: translateY(-6px);
     -o-transform: translateY(-6px);
     transform: translateY(-6px);
-  }s
+  }
 `;
 
 const Button = ({ href, label }) => (

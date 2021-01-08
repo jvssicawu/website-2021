@@ -28,7 +28,7 @@ const ParallaxLayers = () => {
       </Layer>
       <Layer data-depth="0.4">
         <img src="assets/parallax/Layer4.svg" alt="layer4" />
-        <img src="assets/parallax/Layer5.svg" alt="layer5" />
+        <img src="assets/parallax/Layer1.svg" alt="layer1" />
         <img src="assets/parallax/Layer2.svg" alt="layer2" />
       </Layer>
       <Layer data-depth="0.8">
