@@ -4,46 +4,10 @@ import { useStaticQuery, graphql } from 'gatsby';
 import useIsInViewport from 'use-is-in-viewport';
 import Button from '../components/Button';
 import Card from '../components/Card';
+import Content from '../containers/Content';
 import Header from '../components/Header';
-import Section from '../components/Section';
-
-const TextContainer = styled.div`
-  background: ${(props) => props.theme.colorPalette.white};
-  border: none;
-  border-radius: 1.5em;
-  color: ${(props) => props.theme.colorPalette.black};
-  padding: 1em 1.5em;
-  text-align: left;
-  width: 500px;
-  span {
-    font-weight: 500;
-  }
-`;
-
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &:not(:last-child) {
-    margin-bottom: 4em;
-  }
-  -webkit-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
-  -moz-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
-  -o-transition: opacity 0.6s ease-in, transform 0.6s ease-out;
-  transition: opacity 0.6s ease-in, transform 0.6s ease-out;
-  &.hidden {
-    will-change: opacity;
-    opacity: 0;
-    -webkit-transform: translateY(10vh);
-    -moz-transform: translateY(10vh);
-    -o-transform: translateY(10vh);
-    transform: translateY(10vh);
-  }
-  &.visible {
-    opacity: 1;
-    transform: none;
-  }
-`;
+import Row from '../containers/Row';
+import Section from '../containers/Section';
 
 const Column = styled.div`
   margin-right: 4em;
@@ -79,7 +43,7 @@ const About = () => {
             label="Resume"
           />
         </Column>
-        <TextContainer>
+        <Content>
           <p>
             Hey, I&apos;m Jess! I&apos;m a 4th year UBC computer science nerd
             passionate about both
@@ -93,7 +57,7 @@ const About = () => {
             especially in the areas of web development. If you want to know more
             about me, keep on scrolling!
           </p>
-        </TextContainer>
+        </Content>
       </Row>
       <Header>Passions</Header>
       <Row>
