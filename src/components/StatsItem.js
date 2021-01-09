@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import useIsInViewport from 'use-is-in-viewport';
 import CountUp from 'react-countup';
 
-const StatsWrapper = styled.div`
+const StatsItemWrapper = styled.div`
   align-items: center;
   display: flex;
   p {
@@ -37,7 +37,7 @@ const Column = styled.div`
 const StatsItem = ({ caption, counter, imageUrl }) => {
   const [isInViewport, targetRef] = useIsInViewport();
   return (
-    <StatsWrapper
+    <StatsItemWrapper
       ref={targetRef}
       className={isInViewport ? 'visible' : 'hidden'}
     >
@@ -46,7 +46,7 @@ const StatsItem = ({ caption, counter, imageUrl }) => {
         {isInViewport && <CountUp start={0} end={counter} />}
         <p>{caption}</p>
       </Column>
-    </StatsWrapper>
+    </StatsItemWrapper>
   );
 };
 

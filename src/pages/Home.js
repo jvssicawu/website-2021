@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 import { useStaticQuery, graphql } from 'gatsby';
+import Biography from '../components/Biography';
 import Button from '../components/Button';
 import Link from '../components/Link';
 import ParallaxLayers from '../components/ParallaxLayers';
@@ -14,15 +15,23 @@ const LinkContainer = styled.div`
   list-style: none;
 `;
 
-const socialLinksQuery = graphql`
-  query socialLinksQuery {
-    allSocialLinkItemsJson {
+const socialsAndButtonQuery = graphql`
+  query socialsAndButtonQuery {
+    allDataJson {
       edges {
         node {
-          description
-          href
-          imageUrlDark
-          imageUrlLight
+          socials {
+            description
+            href
+            imageUrlDark
+            imageUrlLight
+          }
+          buttons {
+            biography {
+              href
+              label
+            }
+          }
         }
       }
     }
@@ -31,33 +40,27 @@ const socialLinksQuery = graphql`
 
 const Home = () => {
   const themeContext = useContext(ThemeManagerContext);
-  const { allSocialLinkItemsJson } = useStaticQuery(socialLinksQuery);
+  const { allDataJson } = useStaticQuery(socialsAndButtonQuery);
+  const { socials, buttons } = allDataJson.edges[0].node;
   return (
     <>
       <Toggle />
       <ParallaxLayers />
       <Section>
-        <img src="assets/profilePic.svg" alt="Jess" />
-        <h1>Jessica Wu</h1>
-        <span>Hi, I&apos;m a developer!</span>
+        <Biography />
         <LinkContainer>
-          {allSocialLinkItemsJson.edges.map((item) => (
+          {socials.map((item) => (
             <Link
-              key={item.node.description}
-              description={item.node.description}
-              href={item.node.href}
+              key={item.description}
+              description={item.description}
+              href={item.href}
               imageUrl={
-                themeContext.isDark
-                  ? item.node.imageUrlDark
-                  : item.node.imageUrlLight
+                themeContext.isDark ? item.imageUrlDark : item.imageUrlLight
               }
             />
           ))}
         </LinkContainer>
-        <Button
-          href="https://drive.google.com/file/d/1Q1sDxxgvIbdiEvTbR0Xxzjjm99fjHjLq/view?usp=sharing"
-          label="Hire me! :)"
-        />
+        <Button href={buttons.biography.href} label={buttons.biography.label} />
       </Section>
     </>
   );

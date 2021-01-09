@@ -1,0 +1,119 @@
+{
+  "biography": {
+    "title": "Jessica Wu",
+    "description": "Hi I'm a developer!",
+    "imageUrl": "assets/profilePic.svg",
+    "aboutMe": {
+      "part1": "Hey, I'm Jess! I'm a 4th year UBC computer science nerd passionate about both ",
+      "span1": "design",
+      "part2": " and ",
+      "span2": "technology",
+      "part3": ".",
+      "part4": "I love finding ways to connect the two and bring creations to life, especially in the areas of web development. If you want to know more about me, keep on scrolling!"
+    }
+  },
+  "buttons": {
+    "biography": {
+      "href": "https://drive.google.com/file/d/1Q1sDxxgvIbdiEvTbR0Xxzjjm99fjHjLq/view?usp=sharing",
+      "label": "Hire me! :)"
+    },
+    "resume": {
+      "href": "https://drive.google.com/file/d/1Q1sDxxgvIbdiEvTbR0Xxzjjm99fjHjLq/view?usp=sharing",
+      "label": "Resume"
+    }
+  },
+  "education": {
+    "date": "Sep 2016 - May 2021",
+    "title": "University of British Columbia",
+    "description": "Bachelor of Science, Major in Computer Science"
+  },
+  "experience": [
+    {
+      "date": "May 2020 - Jan 2021",
+      "company": "SAP",
+      "title": "iXp Agile Developer Intern",
+      "description": "Implemented geospatial query optimization that persists queries in a central place for performance gain. Shipped high-priority JavaScript bug fixes and wrote automation to maintain quality."
+    },
+    {
+      "date": "Sep 2019 - Apr 2020",
+      "company": "Hootsuite",
+      "title": "Software Developer Co-op",
+      "description": "Crushed bugs in PHP, refactored Scala backend code, implemented front-end React features and an endpoint in Go, and led an API migration project for my team’s features."
+    }
+  ],
+  "passions": [
+    {
+      "title": "UI/UX Design",
+      "description": "Something that I really enjoy is the process of owning a project and carefully designing it from scratch.",
+      "bgColor": "teal",
+      "imageUrl": "assets/passions/UIUXDesign.svg",
+      "bgImageUrl": "assets/passions/UIUXDesignBg.svg"
+    },
+    {
+      "title": "Web Development",
+      "description": "Then, taking that to the next level and building it in order to bring it to life is a whole new success.",
+      "bgColor": "yellow",
+      "imageUrl": "assets/passions/WebDev.svg",
+      "bgImageUrl": "assets/passions/WebDevBg.svg"
+    },
+    {
+      "title": "Hackathons",
+      "description": "I absolutely love the ideation, learning, and collaboration that happens during these 24-hour events.",
+      "bgColor": "red",
+      "imageUrl": "assets/passions/Hackathons.svg",
+      "bgImageUrl": "assets/passions/HackathonsBg.svg"
+    }
+  ],
+  "socials": [
+    {
+      "href": "https://www.linkedin.com/in/jvssicawu/",
+      "imageUrlDark": "assets/social/LinkedIn.svg",
+      "imageUrlLight": "assets/social/LinkedInDark.svg",
+      "description": "LinkedIn Icon"
+    },
+    {
+      "href": "https://medium.com/@jessicawu.9898",
+      "imageUrlDark": "assets/social/Medium.svg",
+      "imageUrlLight": "assets/social/MediumDark.svg",
+      "description": "Medium Icon"
+    },
+    {
+      "href": "https://github.com/jvssicawu",
+      "imageUrlDark": "assets/social/GitHub.svg",
+      "imageUrlLight": "assets/social/GitHubDark.svg",
+      "description": "GitHub Icon"
+    },
+    {
+      "href": "mailto:jessicawu.98@hotmail.ca",
+      "imageUrlDark": "assets/social/Email.svg",
+      "imageUrlLight": "assets/social/EmailDark.svg",
+      "description": "Email Icon"
+    }
+  ],
+  "stats": [
+    {
+      "counter": 4375,
+      "caption": "cups of tea",
+      "imageUrlDark": "assets/stats/Tea.svg",
+      "imageUrlLight": "assets/stats/TeaDark.svg"
+    },
+    {
+      "counter": 168,
+      "caption": "hours at hackathons",
+      "imageUrlDark": "assets/stats/Code.svg",
+      "imageUrlLight": "assets/stats/CodeDark.svg"
+    },
+    {
+      "counter": 120,
+      "caption": "course credits",
+      "imageUrlDark": "assets/stats/Book.svg",
+      "imageUrlLight": "assets/stats/BookDark.svg"
+    },
+    {
+      "counter": 22,
+      "caption": "years of learning",
+      "imageUrlDark": "assets/stats/Pen.svg",
+      "imageUrlLight": "assets/stats/PenDark.svg"
+    }
+  ]
+}

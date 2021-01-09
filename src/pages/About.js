@@ -13,16 +13,36 @@ const Column = styled.div`
   margin-right: 4em;
 `;
 
-const passionsQuery = graphql`
-  query passionsQuery {
-    allPassionItemsJson {
+const aboutQuery = graphql`
+  query aboutQuery {
+    allDataJson {
       edges {
         node {
-          title
-          description
-          bgColor
-          imageUrl
-          bgImageUrl
+          passions {
+            bgColor
+            bgImageUrl
+            description
+            imageUrl
+            title
+          }
+          biography {
+            description
+            imageUrl
+            aboutMe {
+              part1
+              part2
+              part3
+              part4
+              span1
+              span2
+            }
+          }
+          buttons {
+            resume {
+              href
+              label
+            }
+          }
         }
       }
     }
@@ -30,45 +50,38 @@ const passionsQuery = graphql`
 `;
 
 const About = () => {
-  const { allPassionItemsJson } = useStaticQuery(passionsQuery);
+  const { allDataJson } = useStaticQuery(aboutQuery);
+  const { passions, biography, buttons } = allDataJson.edges[0].node;
   const [isInViewport, targetRef] = useIsInViewport();
   return (
     <Section>
       <Header>About Me</Header>
       <Row ref={targetRef} className={isInViewport ? 'visible' : 'hidden'}>
         <Column>
-          <img src="assets/profilePic.svg" alt="Jess" />
-          <Button
-            href="https://drive.google.com/file/d/1Q1sDxxgvIbdiEvTbR0Xxzjjm99fjHjLq/view?usp=sharing"
-            label="Resume"
-          />
+          <img src={biography.imageUrl} alt={biography.description} />
+          <Button href={buttons.resume.href} label={buttons.resume.label} />
         </Column>
         <Content>
           <p>
-            Hey, I&apos;m Jess! I&apos;m a 4th year UBC computer science nerd
-            passionate about both
-            <span> design </span>
-            and
-            <span> technology</span>
-            .
+            {biography.aboutMe.part1}
+            <span>{biography.aboutMe.span1}</span>
+            {biography.aboutMe.part2}
+            <span>{biography.aboutMe.span2}</span>
+            {biography.aboutMe.part3}
           </p>
-          <p>
-            I love finding ways to connect the two and bring creations to life,
-            especially in the areas of web development. If you want to know more
-            about me, keep on scrolling!
-          </p>
+          <p>{biography.aboutMe.part4}</p>
         </Content>
       </Row>
       <Header>Passions</Header>
       <Row>
-        {allPassionItemsJson.edges.map((item) => (
+        {passions.map((item) => (
           <Card
-            key={item.node.title}
-            bgColor={item.node.bgColor}
-            bgImageUrl={item.node.bgImageUrl}
-            description={item.node.description}
-            imageUrl={item.node.imageUrl}
-            title={item.node.title}
+            key={item.title}
+            bgColor={item.bgColor}
+            bgImageUrl={item.bgImageUrl}
+            description={item.description}
+            imageUrl={item.imageUrl}
+            title={item.title}
           />
         ))}
       </Row>
