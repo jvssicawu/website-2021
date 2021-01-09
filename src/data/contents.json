@@ -115,5 +115,124 @@
       "imageUrlDark": "assets/stats/Pen.svg",
       "imageUrlLight": "assets/stats/PenDark.svg"
     }
+  ],
+  "projectTypes": ["Dev", "Design", "Articles"],
+  "projects": [
+    {
+      "name": "Jean Around the World",
+      "imagePreviewUrl": "assets/projects/JATWPreview.png",
+      "imageUrl": "assets/projects/JATW.png",
+      "type": "Dev",
+      "description": "MERN stack web app integrating Google Places API to recommend trip itineraries based on a set of user preferences. Designed and implemented front-end components, set up database, integrated key features such as user signup/login functionality and exporting to calendar with dynamic result processing.",
+      "buttons": [
+        {
+          "href": "https://github.com/denim-squad/jean-around-the-world",
+          "label": "Source Code"
+        },
+        {
+          "href": "jeanaroundtheworld.herokuapp.com",
+          "label": "Demo"
+        }
+      ]
+    },
+    {
+      "name": "i-prep-you",
+      "imagePreviewUrl": "assets/projects/IPrepYouPreview.png",
+      "imageUrl": "assets/projects/IPrepYou.png",
+      "type": "Dev",
+      "description": "Web app leveraging facial recognition and speech-to-text APIs to provide real-time feedback-driven interview prep experience based on user performance. Designed and implemented front-end components to retrieve and render back-end data.",
+      "buttons": [
+        {
+          "href": "https://github.com/joshflchan/i-prep-you",
+          "label": "Source Code"
+        },
+        {
+          "href": "https://devpost.com/software/i-prep-you",
+          "label": "Devpost"
+        }
+      ]
+    },
+    {
+      "name": "Personal Website (2019)",
+      "imagePreviewUrl": "assets/projects/WebsitePreview.png",
+      "imageUrl": "assets/projects/Website.png",
+      "type": "Dev",
+      "description": "Old personal website designed in Figma and built with vanilla HTML/CSS/JavaScript. Features very basic responsive design and has lots of room for improvement since then.",
+      "buttons": [
+        {
+          "href": "https://github.com/jvssicawu/portfolio",
+          "label": "Source Code"
+        },
+        {
+          "href": "https://jvssicawu.github.io/portfolio/",
+          "label": "Demo"
+        }
+      ]
+    },
+    {
+      "name": "UBC Hackcamp 2020 Design",
+      "imagePreviewUrl": "assets/projects/HackcampPreview.png",
+      "imageUrl": "assets/projects/Hackcamp.png",
+      "type": "Design",
+      "description": "Designed for UBC's 2020 beginner-friendly hackathon as part of nwPlus' design team.",
+      "buttons": [
+        {
+          "href": "https://hackcamp.nwplus.io/",
+          "label": "Demo"
+        }
+      ]
+    },
+    {
+      "name": "nwHacks 2020 Design",
+      "imagePreviewUrl": "assets/projects/NwHacksPreview.png",
+      "imageUrl": "assets/projects/NwHacks.png",
+      "type": "Design",
+      "description": "Designed for Western Canada's largest hackathon, nwHacks, as part of nwPlus' design team.",
+      "buttons": [
+        {
+          "href": "https://2020.nwhacks.io/",
+          "label": "Demo"
+        }
+      ]
+    },
+    {
+      "name": "nwPlus Livesite Design",
+      "imagePreviewUrl": "assets/projects/PortalPreview.png",
+      "imageUrl": "assets/projects/Portal.png",
+      "type": "Design",
+      "description": "Designed a live site platform for handling hackathon day-of stream logistics as well as streamlining hacker experience as part of nwPlus' design team.",
+      "buttons": [
+        {
+          "href": "https://portal.nwplus.io/",
+          "label": "Demo"
+        }
+      ]
+    },
+    {
+      "name": "Designing cmd-f, Vancouver’s first all-female* hackathon",
+      "imagePreviewUrl": "assets/projects/CmdfPreview.png",
+      "imageUrl": "assets/projects/Cmdf.png",
+      "type": "Articles",
+      "description": "Branding and design direction for a first-iteration hackathon.",
+      "buttons": [
+        {
+          "href": "https://medium.com/nwplusubc/designing-cmd-f-vancouvers-first-all-female-hackathon-9d25afe16a0b",
+          "label": "Read on Medium"
+        }
+      ]
+    },
+    {
+      "name": "Inbox: Powering our Front-End through a Data-Driven Model",
+      "imagePreviewUrl": "assets/projects/InboxPreview.png",
+      "imageUrl": "assets/projects/Inbox.png",
+      "type": "Articles",
+      "description": "Hootsuite Inbox is a product that allows customers to engage with their audiences through several various social media platforms: all in one consolidated place. To manage such large flows of data, we maintain what we call a data-driven approach that leverages GraphQL queries to communicate with and power our React front-end.",
+      "buttons": [
+        {
+          "href": "https://medium.com/hootsuite-engineering/inbox-powering-our-front-end-through-a-data-driven-model-716d3f636109",
+          "label": "Read on Medium"
+        }
+      ]
+    }
   ]
 }

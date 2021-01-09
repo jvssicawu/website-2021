@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SectionContainer = styled.section`
-  height: 100vh;
   min-height: 100vh;
   align-items: center;
   display: flex;

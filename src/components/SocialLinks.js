@@ -1,5 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
+
+const LinkContainer = styled.div`
+  margin-top: 1em;
+  margin-bottom: 1em;
+  list-style: none;
+`;
 
 const LinkWrapper = styled.div`
   display: inline-block;
@@ -29,7 +36,7 @@ const LinkWrapper = styled.div`
   }
 `;
 
-const Link = ({ description, href, imageUrl }) => (
+const SocialLink = ({ description, href, imageUrl }) => (
   <LinkWrapper>
     <a href={href} target="_blank" rel="noopener noreferrer">
       <img src={imageUrl} alt={description} />
@@ -37,8 +44,26 @@ const Link = ({ description, href, imageUrl }) => (
   </LinkWrapper>
 );
 
-Link.defaultProps = {
+const SocialLinks = ({ socials }) => {
+  const themeContext = useContext(ThemeManagerContext);
+  return (
+    <LinkContainer>
+      {socials.map((item) => (
+        <SocialLink
+          key={item.description}
+          description={item.description}
+          href={item.href}
+          imageUrl={
+            themeContext.isDark ? item.imageUrlDark : item.imageUrlLight
+          }
+        />
+      ))}
+    </LinkContainer>
+  );
+};
+
+SocialLink.defaultProps = {
   description: 'Oop',
 };
 
-export default Link;
+export default SocialLinks;

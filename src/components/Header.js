@@ -5,7 +5,7 @@ const Header = styled.h1`
   font-size: 1.5em;
   display: flex;
   justify-content: left;
-  padding: 1em;
+  padding: 1em 0em;
   &:before {
     content: '';
     background: url('assets/headerDecoration.svg') left top no-repeat;

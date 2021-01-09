@@ -1,15 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 import { useStaticQuery, graphql } from 'gatsby';
 import Header from '../components/Header';
 import Section from '../containers/Section';
 import Content from '../containers/Content';
+import Projects from '../components/Projects';
 import Row from '../containers/Row';
-import StatsItem from '../components/StatsItem';
-import TextItem from '../components/TextItem';
+import Stats from '../components/Stats';
+import TextGroup from '../components/TextGroup';
 
-const TextContent = styled(Content)`
+const ContentWrapper = styled(Content)`
   width: 420px;
   &:not(:last-child) {
     margin-right: 2em;
@@ -20,22 +20,11 @@ const TextContent = styled(Content)`
   }
 `;
 
-const StatsWrapper = styled.div`
-  padding: 1em;
-  padding-bottom: 0;
-`;
-
 const expQuery = graphql`
   query expQuery {
     allDataJson {
       edges {
         node {
-          stats {
-            caption
-            counter
-            imageUrlDark
-            imageUrlLight
-          }
           education {
             date
             description
@@ -54,35 +43,24 @@ const expQuery = graphql`
 `;
 
 const Experience = () => {
-  const themeContext = useContext(ThemeManagerContext);
   const { allDataJson } = useStaticQuery(expQuery);
-  const { stats, education, experience } = allDataJson.edges[0].node;
+  const { education, experience } = allDataJson.edges[0].node;
   return (
     <Section>
       <Header>Education & Experience</Header>
       <Row>
-        <TextContent>
-          <TextItem content={education} />
-          <StatsWrapper>
-            {stats.map((item) => (
-              <StatsItem
-                key={item.counter}
-                caption={item.caption}
-                counter={item.counter}
-                imageUrl={
-                  themeContext.isDark ? item.imageUrlDark : item.imageUrlLight
-                }
-              />
-            ))}
-          </StatsWrapper>
-        </TextContent>
-        <TextContent>
+        <ContentWrapper>
+          <TextGroup content={education} />
+          <Stats />
+        </ContentWrapper>
+        <ContentWrapper>
           {experience.map((item) => (
-            <TextItem content={item} />
+            <TextGroup key={item.title} content={item} />
           ))}
-        </TextContent>
+        </ContentWrapper>
       </Row>
-      <Header>Recent Highlights</Header>
+      <Header>Recent Projects</Header>
+      <Projects />
     </Section>
   );
 };
