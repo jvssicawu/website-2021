@@ -7,6 +7,9 @@ import Row from '../containers/Row';
 
 const Column = styled.div`
   margin-right: 4em;
+  img {
+    margin-bottom: 1em;
+  }
 `;
 
 const AboutMe = ({ biography, buttons }) => {

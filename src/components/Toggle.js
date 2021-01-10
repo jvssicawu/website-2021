@@ -4,6 +4,7 @@ import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 import { GlobalStyle } from '../styles/global';
 
 const ToggleWrapper = styled.div`
+  padding: 0.5em;
   span {
     color: ${(props) => props.theme.global.color};
     margin: 8px;

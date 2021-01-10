@@ -6,7 +6,10 @@ const ButtonWrapper = styled.div`
   border: none;
   border-radius: 1.5em;
   padding: 0.8em;
-  margin: 0.5em 1.5em;
+  margin: auto;
+  text-align: center;
+  min-width: 25%;
+  max-width: 8em;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;

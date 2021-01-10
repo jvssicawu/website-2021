@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${(props) => props.theme.global.bg};
     color: ${(props) => props.theme.global.color};
     overflow-x: hidden;
+    margin: 0;
   }
 `;
 
