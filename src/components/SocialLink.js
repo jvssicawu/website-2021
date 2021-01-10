@@ -1,12 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
-
-const LinkContainer = styled.div`
-  margin-top: 1em;
-  margin-bottom: 1em;
-  list-style: none;
-`;
 
 const LinkWrapper = styled.div`
   display: inline-block;
@@ -44,26 +37,8 @@ const SocialLink = ({ description, href, imageUrl }) => (
   </LinkWrapper>
 );
 
-const SocialLinks = ({ socials }) => {
-  const themeContext = useContext(ThemeManagerContext);
-  return (
-    <LinkContainer>
-      {socials.map((item) => (
-        <SocialLink
-          key={item.description}
-          description={item.description}
-          href={item.href}
-          imageUrl={
-            themeContext.isDark ? item.imageUrlDark : item.imageUrlLight
-          }
-        />
-      ))}
-    </LinkContainer>
-  );
-};
-
 SocialLink.defaultProps = {
   description: 'Oop',
 };
 
-export default SocialLinks;
+export default SocialLink;

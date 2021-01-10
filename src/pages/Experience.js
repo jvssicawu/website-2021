@@ -6,7 +6,7 @@ import Section from '../containers/Section';
 import Content from '../containers/Content';
 import Projects from '../components/Projects';
 import Row from '../containers/Row';
-import Stats from '../components/Stats';
+import StatsList from '../components/StatsList';
 import TextGroup from '../components/TextGroup';
 
 const ContentWrapper = styled(Content)`
@@ -51,7 +51,7 @@ const Experience = () => {
       <Row>
         <ContentWrapper>
           <TextGroup content={education} />
-          <Stats />
+          <StatsList />
         </ContentWrapper>
         <ContentWrapper>
           {experience.map((item) => (

@@ -1,29 +1,12 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
-import useIsInViewport from 'use-is-in-viewport';
 import { useStaticQuery, graphql } from 'gatsby';
-import CountUp from 'react-countup';
-import FadeIn from '../containers/FadeIn';
+import StatsItem from './StatsItem';
 
-const StatsItemWrapper = styled(FadeIn)`
-  align-items: center;
-  display: flex;
-  p {
-    margin: 0;
-  }
-`;
-
-const StatsWrapper = styled.div`
+const StatsListWrapper = styled.div`
   padding: 1em;
   padding-top: 0;
-`;
-
-const Column = styled.div`
-  margin-left: 1em;
-  & > span {
-    color: ${(props) => props.theme.colorPalette.black};
-  }
 `;
 
 const statsQuery = graphql`
@@ -43,28 +26,12 @@ const statsQuery = graphql`
   }
 `;
 
-const StatsItem = ({ caption, counter, imageUrl }) => {
-  const [isInViewport, targetRef] = useIsInViewport();
-  return (
-    <StatsItemWrapper
-      ref={targetRef}
-      className={isInViewport ? 'visible' : 'hidden'}
-    >
-      <img src={imageUrl} alt={caption} />
-      <Column>
-        {isInViewport && <CountUp start={0} end={counter} />}
-        <p>{caption}</p>
-      </Column>
-    </StatsItemWrapper>
-  );
-};
-
-const Stats = () => {
+const StatsList = () => {
   const themeContext = useContext(ThemeManagerContext);
   const { allDataJson } = useStaticQuery(statsQuery);
   const { stats } = allDataJson.edges[0].node;
   return (
-    <StatsWrapper>
+    <StatsListWrapper>
       {stats.map((item) => (
         <StatsItem
           key={item.counter}
@@ -75,8 +42,8 @@ const Stats = () => {
           }
         />
       ))}
-    </StatsWrapper>
+    </StatsListWrapper>
   );
 };
 
-export default Stats;
+export default StatsList;

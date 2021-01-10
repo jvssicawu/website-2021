@@ -15,6 +15,7 @@ const colorPalette = {
   teal: '#83D4D1',
   white: '#FFFFFF',
   yellow: '#FED19C',
+  lavendar: '#B0CBFF',
 };
 
 module.exports = {

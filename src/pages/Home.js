@@ -4,7 +4,7 @@ import Biography from '../components/Biography';
 import Button from '../components/Button';
 import ParallaxLayers from '../components/ParallaxLayers';
 import Section from '../containers/Section';
-import SocialLinks from '../components/SocialLinks';
+import SocialLinkList from '../components/SocialLinkList';
 import Toggle from '../components/Toggle';
 
 const buttonsAndSocialsQuery = graphql`
@@ -39,7 +39,7 @@ const Home = () => {
       <ParallaxLayers />
       <Section>
         <Biography />
-        <SocialLinks socials={socials} />
+        <SocialLinkList socials={socials} />
         <Button href={buttons.biography.href} label={buttons.biography.label} />
       </Section>
     </>
