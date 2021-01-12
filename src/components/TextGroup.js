@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
 import useIsInViewport from 'use-is-in-viewport';
 import FadeIn from '../containers/FadeIn';
 
@@ -14,6 +15,27 @@ const TextWrapper = styled(FadeIn)`
   p {
     padding-left: 0;
     padding-bottom: 0;
+  }
+`;
+
+export const educationQuery = graphql`
+  fragment EducationFragment on DataJson {
+    education {
+      date
+      description
+      title
+    }
+  }
+`;
+
+export const experienceQuery = graphql`
+  fragment ExperienceFragment on DataJson {
+    experience {
+      company
+      date
+      description
+      title
+    }
   }
 `;
 

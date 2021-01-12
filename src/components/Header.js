@@ -6,7 +6,8 @@ const Header = styled.h1`
   display: flex;
   justify-content: center;
   padding: 1em 0em;
-  &:after, &:before {
+  &:after,
+  &:before {
     background: none;
   }
   @media ${Device.tablet} {

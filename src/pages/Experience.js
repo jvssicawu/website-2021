@@ -29,17 +29,8 @@ const expQuery = graphql`
     allDataJson {
       edges {
         node {
-          education {
-            date
-            description
-            title
-          }
-          experience {
-            company
-            date
-            description
-            title
-          }
+          ...EducationFragment
+          ...ExperienceFragment
         }
       }
     }

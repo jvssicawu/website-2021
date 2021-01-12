@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
 import useIsInViewport from 'use-is-in-viewport';
 import Button from './Button';
 import Content from '../containers/Content';
@@ -16,12 +17,40 @@ const Column = styled.div`
   }
 `;
 
+export const bioQuery = graphql`
+  fragment BioFragment on DataJson {
+    biography {
+      description
+      altImageUrl
+      aboutMe {
+        part1
+        part2
+        part3
+        part4
+        span1
+        span2
+      }
+    }
+  }
+`;
+
+export const buttonQuery = graphql`
+  fragment ButtonFragment on DataJson {
+    buttons {
+      resume {
+        href
+        label
+      }
+    }
+  }
+`;
+
 const AboutMe = ({ biography, buttons }) => {
   const [isInViewport, targetRef] = useIsInViewport();
   return (
     <Row ref={targetRef} className={isInViewport ? 'visible' : 'hidden'}>
       <Column>
-        <img src={biography.imageUrl} alt={biography.description} />
+        <img src={biography.altImageUrl} alt={biography.description} />
         <Button href={buttons.resume.href} label={buttons.resume.label} />
       </Column>
       <Content>

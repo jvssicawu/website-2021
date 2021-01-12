@@ -6,35 +6,13 @@ import AboutMe from '../components/AboutMe';
 import Passions from '../components/Passions';
 
 const aboutQuery = graphql`
-  query aboutQuery {
+  query {
     allDataJson {
       edges {
         node {
-          passions {
-            bgColor
-            bgImageUrl
-            description
-            imageUrl
-            title
-          }
-          biography {
-            description
-            imageUrl
-            aboutMe {
-              part1
-              part2
-              part3
-              part4
-              span1
-              span2
-            }
-          }
-          buttons {
-            resume {
-              href
-              label
-            }
-          }
+          ...BioFragment
+          ...ButtonFragment
+          ...PassionsFragment
         }
       }
     }

@@ -12,12 +12,7 @@ const buttonsAndSocialsQuery = graphql`
     allDataJson {
       edges {
         node {
-          socials {
-            description
-            href
-            imageUrlDark
-            imageUrlLight
-          }
+          ...SocialsFragment
           buttons {
             biography {
               href

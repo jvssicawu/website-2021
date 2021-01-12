@@ -3,6 +3,7 @@
     "title": "Jessica Wu",
     "description": "Hi, I'm a developer!",
     "imageUrl": "assets/profilePic.svg",
+    "altImageUrl": "assets/altProfilePic.svg",
     "aboutMe": {
       "part1": "Hey, I'm Jess! I'm a 4th year UBC computer science nerd passionate about both ",
       "span1": "design",
@@ -92,22 +93,22 @@
   ],
   "stats": [
     {
-      "counter": 4375,
+      "counter": 6375,
       "caption": "cups of tea",
       "imageUrlDark": "assets/stats/Tea.svg",
       "imageUrlLight": "assets/stats/TeaDark.svg"
+    },
+    {
+      "counter": 4650,
+      "caption": "hours on Spotify",
+      "imageUrlDark": "assets/stats/Spotify.svg",
+      "imageUrlLight": "assets/stats/SpotifyDark.svg"
     },
     {
       "counter": 168,
       "caption": "hours at hackathons",
       "imageUrlDark": "assets/stats/Code.svg",
       "imageUrlLight": "assets/stats/CodeDark.svg"
-    },
-    {
-      "counter": 120,
-      "caption": "course credits",
-      "imageUrlDark": "assets/stats/Book.svg",
-      "imageUrlLight": "assets/stats/BookDark.svg"
     },
     {
       "counter": 22,
