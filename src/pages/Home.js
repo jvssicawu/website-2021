@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <>
       <Toggle />
-      <ParallaxLayers />
+      <ParallaxLayers id="home" />
       <Section>
         <Biography />
         <SocialLinkList socials={socials} />

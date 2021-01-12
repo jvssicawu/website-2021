@@ -16,14 +16,14 @@ const Layer = styled.div`
   text-align: center;
 `;
 
-const ParallaxLayers = () => {
+const ParallaxLayers = ({ id }) => {
   useEffect(() => {
-    const scene = document.getElementById('scene');
+    const scene = document.getElementById(id);
     const parallaxInstance = new Parallax(scene, { relativeInput: true });
     parallaxInstance.scalar(5.0, 5.0);
   });
   return (
-    <ParallaxContainer id="scene">
+    <ParallaxContainer id={id}>
       <Layer data-depth="0.1">
         <img src="assets/parallax/Layer3.svg" alt="layer3" />
       </Layer>
