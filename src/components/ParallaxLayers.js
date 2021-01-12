@@ -8,6 +8,7 @@ const ParallaxContainer = styled.div`
   width: 100vw;
   position: absolute;
   z-index: -1;
+  overflow-x: hidden;
 `;
 
 const Layer = styled.div`

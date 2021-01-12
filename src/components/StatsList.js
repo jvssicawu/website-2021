@@ -3,10 +3,13 @@ import styled from 'styled-components';
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 import { useStaticQuery, graphql } from 'gatsby';
 import StatsItem from './StatsItem';
+import Device from '../constants.js/Device';
 
 const StatsListWrapper = styled.div`
-  padding: 1em;
-  padding-top: 0;
+  padding: 1.5em;
+  @media ${Device.tablet} {
+    padding-left: 2em;
+  }
 `;
 
 const statsQuery = graphql`

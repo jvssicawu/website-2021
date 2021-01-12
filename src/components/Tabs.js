@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import Device from '../constants.js/Device';
 import ProjectCard from './ProjectCard';
 
 const TabsWrapper = styled.div`
@@ -9,16 +10,21 @@ const TabsWrapper = styled.div`
 const TabList = styled.div`
   margin: 0em 2em;
   display: flex;
+  justify-content: center;
   & div:not(:last-child) {
     margin-right: 2em;
   }
 `;
 
 const TabContent = styled.div`
-  display: flex;
-  justify-content: center;
+  display: block;
+  min-height: 800px;
   margin-top: 2em;
   min-height: 300px;
+  @media ${Device.tablet} {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const Tab = styled.div`

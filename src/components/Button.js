@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Device from '../constants.js/Device';
 
 const ButtonWrapper = styled.div`
   background: ${(props) => props.theme.colorPalette.primaryButton};
@@ -7,6 +8,7 @@ const ButtonWrapper = styled.div`
   border-radius: 1.5em;
   padding: 0.8em;
   margin: auto;
+  margin-bottom: 0.5em;
   text-align: center;
   min-width: 25%;
   max-width: 8em;
@@ -26,6 +28,9 @@ const ButtonWrapper = styled.div`
     -moz-transform: translateY(-6px);
     -o-transform: translateY(-6px);
     transform: translateY(-6px);
+  }
+  @media ${Device.tablet} {
+    min-width: 8em;
   }
 `;
 

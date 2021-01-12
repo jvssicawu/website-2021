@@ -14,6 +14,9 @@ const StatsItemWrapper = styled(FadeIn)`
 
 const Column = styled.div`
   margin-left: 1em;
+  p {
+    padding: 0;
+  }
   & > span {
     color: ${(props) => props.theme.colorPalette.black};
   }

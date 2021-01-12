@@ -33,7 +33,7 @@ const ButtonWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   > * {
-    margin: 0em 0em 0.5em 1em;
+    margin: 0.5em 0em 1em 1em;
   }
   > * :hover {
     -webkit-transform: none;
@@ -50,6 +50,19 @@ const CardWrapper = styled.div`
     border-radius: 1.5em;
     margin-bottom: 0;
   }
+`;
+
+const ImgWrapper = styled.div`
+  img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+  }
+`;
+
+const OverlayWrapper = styled.div`
+  display: inline-block;
+  position: relative;
 `;
 
 const Overlay = styled.div`
@@ -87,13 +100,17 @@ const ProjectCard = ({ project }) => {
   };
   return (
     <CardWrapper>
-      <img src={project.imagePreviewUrl} alt={`${project.name} Preview`} />
-      <Overlay onClick={handleClickOpen}>
-        <h2>{project.name}</h2>
-      </Overlay>
+      <OverlayWrapper>
+        <img src={project.imagePreviewUrl} alt={`${project.name} Preview`} />
+        <Overlay onClick={handleClickOpen}>
+          <h2>{project.name}</h2>
+        </Overlay>
+      </OverlayWrapper>
       <ThemeProvider theme={theme}>
         <Dialog open={open} onClose={handleClose}>
-          <img src={project.imageUrl} alt={project.name} />
+          <ImgWrapper>
+            <img src={project.imageUrl} alt={project.name} />
+          </ImgWrapper>
           <DialogTitle>{project.name}</DialogTitle>
           <DialogContent>
             <DialogContentText>{project.description}</DialogContentText>

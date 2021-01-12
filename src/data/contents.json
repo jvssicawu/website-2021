@@ -1,7 +1,7 @@
 {
   "biography": {
     "title": "Jessica Wu",
-    "description": "Hi I'm a developer!",
+    "description": "Hi, I'm a developer!",
     "imageUrl": "assets/profilePic.svg",
     "aboutMe": {
       "part1": "Hey, I'm Jess! I'm a 4th year UBC computer science nerd passionate about both ",
@@ -213,11 +213,11 @@
       "imagePreviewUrl": "assets/projects/CmdfPreview.png",
       "imageUrl": "assets/projects/Cmdf.png",
       "type": "Articles",
-      "description": "Branding and design direction for a first-iteration hackathon.",
+      "description": "cmd-f is Vancouver’s first all-female* hackathon held at the University of British Columbia. As the founding brand designer, in this article I detail my design process and journey in bringing cmd-f to life.",
       "buttons": [
         {
           "href": "https://medium.com/nwplusubc/designing-cmd-f-vancouvers-first-all-female-hackathon-9d25afe16a0b",
-          "label": "Read on Medium"
+          "label": "Read Article"
         }
       ]
     },
@@ -226,11 +226,11 @@
       "imagePreviewUrl": "assets/projects/InboxPreview.png",
       "imageUrl": "assets/projects/Inbox.png",
       "type": "Articles",
-      "description": "Hootsuite Inbox is a product that allows customers to engage with their audiences through several various social media platforms: all in one consolidated place. To manage such large flows of data, we maintain what we call a data-driven approach that leverages GraphQL queries to communicate with and power our React front-end.",
+      "description": "During my time as an intern at Hootsuite, I worked on the Inbox product. In this article, I talk about how we maintain what we call a data-driven approach that leverages GraphQL queries to communicate with and power our React front-end.",
       "buttons": [
         {
           "href": "https://medium.com/hootsuite-engineering/inbox-powering-our-front-end-through-a-data-driven-model-716d3f636109",
-          "label": "Read on Medium"
+          "label": "Read Article"
         }
       ]
     }

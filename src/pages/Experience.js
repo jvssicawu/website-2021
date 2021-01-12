@@ -8,15 +8,19 @@ import Projects from '../components/Projects';
 import Row from '../containers/Row';
 import StatsList from '../components/StatsList';
 import TextGroup from '../components/TextGroup';
+import Device from '../constants.js/Device';
 
 const ContentWrapper = styled(Content)`
-  width: 420px;
-  &:not(:last-child) {
-    margin-right: 2em;
-  }
+  width: 100%;
+  margin-bottom: 2em;
   b,
   span {
     display: block;
+  }
+  @media ${Device.tablet} {
+    &:not(:last-child) {
+      margin-right: 2em;
+    }
   }
 `;
 
@@ -48,7 +52,7 @@ const Experience = () => {
   return (
     <Section>
       <Header>Education & Experience</Header>
-      <Row>
+      <Row className="experience">
         <ContentWrapper>
           <TextGroup content={education} />
           <StatsList />

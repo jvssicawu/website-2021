@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Device from '../constants.js/Device';
 
 const SectionContainer = styled.section`
   min-height: 100vh;
@@ -21,6 +22,10 @@ const DivContainer = styled.div`
   }
   span {
     color: ${(props) => props.theme.colorPalette.primaryButton};
+  }
+  @media ${Device.mobile} {
+    display: block;
+    width: 100%;
   }
 `;
 

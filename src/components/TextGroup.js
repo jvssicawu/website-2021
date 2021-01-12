@@ -4,8 +4,17 @@ import useIsInViewport from 'use-is-in-viewport';
 import FadeIn from '../containers/FadeIn';
 
 const TextWrapper = styled(FadeIn)`
-  padding: 1em;
-  padding-bottom: 0;
+  padding: 2em;
+  &:not(:last-child) {
+    padding-bottom: 0;
+  }
+  b.title {
+    padding-bottom: 1em;
+  }
+  p {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
 `;
 
 const TextGroup = ({ content }) => {
@@ -17,7 +26,7 @@ const TextGroup = ({ content }) => {
     >
       <span>{content.date}</span>
       {!!content.company && <b>{content.company}</b>}
-      <b>{content.title}</b>
+      <b className="title">{content.title}</b>
       <p>{content.description}</p>
     </TextWrapper>
   );
