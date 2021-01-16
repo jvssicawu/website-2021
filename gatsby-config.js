@@ -20,6 +20,7 @@ const colorPalette = {
 
 module.exports = {
   /* Your site config here */
+  pathPrefix: "/website-2021",
   siteMetadata: {
     title: `Jessica's Personal Website`,
     siteUrl: `https://jvssicawu.github.io`,

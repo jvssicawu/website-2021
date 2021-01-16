@@ -6,6 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
@@ -40,10 +41,11 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "gh-pages": "^3.1.0",
     "prettier": "2.1.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jvssicawu/personal-website-2021"
+    "url": "https://github.com/jvssicawu/website-2021"
   }
 }
