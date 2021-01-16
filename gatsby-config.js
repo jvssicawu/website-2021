@@ -22,7 +22,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Jessica's Personal Website`,
-    siteUrl: `https://jvssicawu.github.io/website-2020`,
+    siteUrl: `https://jvssicawu.github.io`,
     description: `A static website to showcase my work.`,
   },
   plugins: [
