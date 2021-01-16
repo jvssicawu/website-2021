@@ -28,6 +28,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-smoothscroll`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-google-fonts`,
