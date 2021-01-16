@@ -8,7 +8,7 @@ import Projects from '../components/Projects';
 import Row from '../containers/Row';
 import StatsList from '../components/StatsList';
 import TextGroup from '../components/TextGroup';
-import Device from '../constants.js/Device';
+import Device from '../constants/Device';
 
 const ContentWrapper = styled(Content)`
   width: 100%;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Device from '../constants.js/Device';
+import Device from '../constants/Device';
 
 const ButtonWrapper = styled.div`
   background: ${(props) => props.theme.colorPalette.primaryButton};

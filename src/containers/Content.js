@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Device from '../constants.js/Device';
+import Device from '../constants/Device';
 
 const Content = styled.div`
   background: ${(props) => props.theme.colorPalette.white};

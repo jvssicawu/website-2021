@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Device from '../constants.js/Device';
+import Device from '../constants/Device';
 
 const SectionContainer = styled.section`
   min-height: 100vh;

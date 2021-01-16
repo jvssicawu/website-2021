@@ -37,6 +37,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Personal Website 2021`,
+        short_name: `Personal Site`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `static/assets/favicon.svg`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,

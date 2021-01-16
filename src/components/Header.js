@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Device from '../constants.js/Device';
+import Device from '../constants/Device';
 
 const Header = styled.h1`
   font-weight: 300;

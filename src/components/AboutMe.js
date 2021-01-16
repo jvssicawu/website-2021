@@ -5,7 +5,7 @@ import useIsInViewport from 'use-is-in-viewport';
 import Button from './Button';
 import Content from '../containers/Content';
 import Row from '../containers/Row';
-import Device from '../constants.js/Device';
+import Device from '../constants/Device';
 
 const Column = styled.div`
   margin-right: 0;

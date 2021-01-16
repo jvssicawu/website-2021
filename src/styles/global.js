@@ -15,6 +15,9 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     margin: 0;
   }
+  ::-webkit-scrollbar {
+    background-color: ${(props) => props.theme.global.bg};
+  }
 `;
 
 export default GlobalStyle;
